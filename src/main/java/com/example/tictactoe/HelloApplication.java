@@ -34,12 +34,7 @@ public class HelloApplication extends Application {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 Button btn = new Button(" ");
-                btn.setOnAction(new EventHandler<ActionEvent>() {
-                    @Override
-                    public void handle(ActionEvent actionEvent) {
-                        btn.setText("X");
-                    }
-                });
+                btn.setOnAction(actionEvent -> btn.setText("X"));
                 root.add(btn, i, j);
             }
         }
